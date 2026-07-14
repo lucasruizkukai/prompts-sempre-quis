@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0043)file:///C:/Users/Lucas/Downloads/index.html -->
+<!-- saved from url=(0046)file:///C:/Users/Lucas/Downloads/index_19.html -->
 <html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,415 +7,89 @@
 <link href="./index_files/css2" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
-    --noite: #2E063D;
-    --veludo: #3D1280;
-    --ametista: #551FBD;
-    --fumaca: #2A2A2A;
-    --grafite: #545157;
-    --chumbo: #918894;
-    --nevoa: #E8E5EB;
-    --dourado: #C6A75C;
-    --champanhe: #E8D5A3;
-    --bg: #F5F3F8;
-    --white: #FFFFFF;
-    --green: #1A6B3C;
-    --greenl: #EBF5F0;
-    --greenborder: #2A9D5C;
+    --noite: #2E063D; --veludo: #3D1280; --ametista: #551FBD;
+    --fumaca: #2A2A2A; --grafite: #545157; --chumbo: #918894;
+    --nevoa: #E8E5EB; --dourado: #C6A75C; --bg: #F5F3F8;
+    --white: #FFFFFF; --green: #1A6B3C; --greenl: #EBF5F0; --greenborder: #2A9D5C;
   }
+  body { font-family: 'Jost', sans-serif; background: var(--bg); color: var(--fumaca); min-height: 100vh; }
 
-  body {
-    font-family: 'Jost', sans-serif;
-    background: var(--bg);
-    color: var(--fumaca);
-    min-height: 100vh;
-  }
+  .site-header { background: var(--fumaca); border-bottom: 2px solid var(--dourado); padding: 28px 24px 20px; text-align: center; }
+  .site-header .eyebrow { font-size: 10px; font-weight: 500; letter-spacing: 4px; text-transform: uppercase; color: var(--nevoa); opacity: 0.6; margin-bottom: 8px; }
+  .site-header h1 { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; font-style: italic; color: var(--nevoa); margin-bottom: 4px; }
+  .site-header .sub { font-size: 11px; font-weight: 300; color: var(--chumbo); letter-spacing: 1px; }
 
-  /* HEADER */
-  .site-header {
-    background: var(--fumaca);
-    border-bottom: 2px solid var(--dourado);
-    padding: 28px 24px 20px;
-    text-align: center;
-  }
-
-  .site-header .eyebrow {
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--nevoa);
-    opacity: 0.6;
-    margin-bottom: 8px;
-  }
-
-  .site-header h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
-    font-weight: 300;
-    font-style: italic;
-    color: var(--nevoa);
-    margin-bottom: 4px;
-  }
-
-  .site-header .sub {
-    font-size: 11px;
-    font-weight: 300;
-    color: var(--chumbo);
-    letter-spacing: 1px;
-  }
-
-  /* INSTRUCOES */
-  .instructions {
-    background: var(--white);
-    border-left: 3px solid var(--ametista);
-    border-radius: 0 10px 10px 0;
-    margin: 24px 20px;
-    padding: 18px 20px;
-  }
-
-  .instructions h2 {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--ametista);
-    margin-bottom: 12px;
-    letter-spacing: 0.5px;
-  }
-
-  .steps {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .step {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    font-size: 13px;
-    font-weight: 300;
-    color: var(--grafite);
-    line-height: 1.5;
-  }
-
-  .step-num {
-    background: var(--ametista);
-    color: white;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 10px;
-    font-weight: 600;
-    flex-shrink: 0;
-    margin-top: 1px;
-  }
-
+  .instructions { background: var(--white); border-left: 3px solid var(--ametista); border-radius: 0 10px 10px 0; margin: 24px 20px; padding: 18px 20px; }
+  .instructions h2 { font-size: 13px; font-weight: 600; color: var(--ametista); margin-bottom: 12px; letter-spacing: 0.5px; }
+  .steps { display: flex; flex-direction: column; gap: 8px; }
+  .step { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; font-weight: 300; color: var(--grafite); line-height: 1.5; }
+  .step-num { background: var(--ametista); color: white; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 600; flex-shrink: 0; margin-top: 1px; }
   .step strong { color: var(--green); }
 
-  /* LOGO INFO */
-  .logo-info {
-    background: #FDF9EE;
-    border-left: 3px solid var(--dourado);
-    border-radius: 0 10px 10px 0;
-    margin: 0 20px 24px;
-    padding: 14px 18px;
-  }
-
-  .logo-info h3 {
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--dourado);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-  }
-
-  .logo-info p {
-    font-size: 12px;
-    font-weight: 300;
-    color: var(--grafite);
-    line-height: 1.6;
-    margin-bottom: 4px;
-  }
-
+  .logo-info { background: #FDF9EE; border-left: 3px solid var(--dourado); border-radius: 0 10px 10px 0; margin: 0 20px 20px; padding: 14px 18px; }
+  .logo-info h3 { font-size: 11px; font-weight: 600; color: var(--dourado); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+  .logo-info p { font-size: 12px; font-weight: 300; color: var(--grafite); line-height: 1.6; margin-bottom: 4px; }
   .logo-info p strong { color: var(--fumaca); font-weight: 500; }
 
-  /* NAV TABS */
-  .tabs {
-    display: flex;
-    gap: 0;
-    margin: 0 20px;
-    border-radius: 10px 10px 0 0;
-    overflow: hidden;
-    border: 1px solid #E0DCE8;
-    border-bottom: none;
-  }
+  /* FORMATO TOGGLE */
+  .formato-toggle { display: flex; margin: 0 20px 16px; background: var(--white); border-radius: 10px; border: 1px solid #E0DCE8; overflow: hidden; }
+  .formato-btn { flex: 1; padding: 12px 8px; border: none; background: transparent; font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 400; color: var(--grafite); cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s; border-right: 1px solid #E0DCE8; }
+  .formato-btn:last-child { border-right: none; }
+  .formato-btn.active { background: var(--ametista); color: white; font-weight: 500; }
+  .formato-btn .fmt-icon { font-size: 18px; }
+  .formato-btn .fmt-label { display: flex; flex-direction: column; text-align: left; line-height: 1.2; }
+  .formato-btn .fmt-label span:first-child { font-size: 13px; font-weight: 500; }
+  .formato-btn .fmt-label span:last-child { font-size: 10px; opacity: 0.7; }
 
-  .tab-btn {
-    flex: 1;
-    padding: 12px 6px;
-    border: none;
-    background: #EDE9F4;
-    color: var(--grafite);
-    font-family: 'Jost', sans-serif;
-    font-size: 11px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s;
-    border-right: 1px solid #E0DCE8;
-    line-height: 1.3;
-    text-align: center;
-  }
-
+  /* TABS */
+  .tabs { display: flex; gap: 0; margin: 0 20px; border-radius: 10px 10px 0 0; overflow: hidden; border: 1px solid #E0DCE8; border-bottom: none; }
+  .tab-btn { flex: 1; padding: 12px 6px; border: none; background: #EDE9F4; color: var(--grafite); font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; cursor: pointer; transition: all 0.2s; border-right: 1px solid #E0DCE8; line-height: 1.3; text-align: center; }
   .tab-btn:last-child { border-right: none; }
+  .tab-btn.active { background: var(--ametista); color: white; }
+  .tab-btn span { display: block; font-size: 16px; font-weight: 700; margin-bottom: 2px; }
 
-  .tab-btn.active {
-    background: var(--ametista);
-    color: white;
-  }
-
-  .tab-btn span {
-    display: block;
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 2px;
-  }
-
-  /* MODELO CARD */
-  .modelo-card {
-    display: none;
-    margin: 0 20px 32px;
-    background: var(--white);
-    border-radius: 0 0 12px 12px;
-    border: 1px solid #E0DCE8;
-    border-top: none;
-    overflow: hidden;
-  }
-
+  /* CARD */
+  .modelo-card { display: none; margin: 0 20px 32px; background: var(--white); border-radius: 0 0 12px 12px; border: 1px solid #E0DCE8; border-top: none; overflow: hidden; }
   .modelo-card.active { display: block; }
+  .modelo-header { padding: 16px 20px; color: white; }
+  .modelo-header .num { font-size: 10px; font-weight: 500; letter-spacing: 3px; opacity: 0.7; margin-bottom: 4px; }
+  .modelo-header h2 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; font-style: italic; }
 
-  .modelo-header {
-    padding: 16px 20px;
-    color: white;
-  }
+  /* FORMATO BADGE */
+  .formato-badge { display: flex; align-items: center; gap: 8px; padding: 10px 20px; border-bottom: 1px solid #E0DCE8; }
+  .fmt-badge-pill { display: inline-flex; align-items: center; gap: 6px; background: var(--ametista); color: white; padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weight: 500; }
+  .fmt-badge-size { font-size: 11px; font-weight: 300; color: var(--chumbo); }
 
-  .modelo-header .num {
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 3px;
-    opacity: 0.7;
-    margin-bottom: 4px;
-  }
+  .quando-usar { background: #F5F3F8; padding: 12px 20px; border-bottom: 1px solid #E0DCE8; }
+  .quando-usar .label { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--chumbo); margin-bottom: 4px; }
+  .quando-usar p { font-size: 13px; font-weight: 400; color: var(--fumaca); }
+  .quando-usar .anexar { font-size: 11px; font-weight: 300; color: var(--chumbo); margin-top: 4px; }
 
-  .modelo-header h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    font-weight: 300;
-    font-style: italic;
-  }
+  .parte-aberta { background: var(--greenl); border: 1.5px solid var(--greenborder); margin: 16px; border-radius: 10px; overflow: hidden; }
+  .parte-aberta-header { background: var(--green); padding: 10px 16px; }
+  .parte-aberta-header span { font-size: 11px; font-weight: 600; color: white; letter-spacing: 1px; text-transform: uppercase; }
+  .parte-aberta-body { padding: 14px 16px; }
+  .parte-aberta-body .instrucao { font-size: 13px; font-weight: 500; color: var(--green); margin-bottom: 8px; }
+  .parte-aberta-body textarea { width: 100%; min-height: 90px; border: 1.5px solid var(--greenborder); border-radius: 8px; padding: 12px; font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 300; color: var(--fumaca); background: white; resize: vertical; outline: none; line-height: 1.6; }
+  .parte-aberta-body textarea:focus { border-color: var(--green); }
+  .parte-aberta-body .exemplo { font-size: 11px; font-weight: 300; color: var(--green); margin-top: 8px; font-style: italic; }
 
-  .quando-usar {
-    background: #F5F3F8;
-    padding: 12px 20px;
-    border-bottom: 1px solid #E0DCE8;
-  }
+  .divisor { display: flex; align-items: center; gap: 12px; padding: 0 16px; margin: 4px 0; }
+  .divisor-line { flex: 1; height: 0; border: none; border-top: 1px dashed #B0A8BC; }
+  .divisor-label { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--chumbo); white-space: nowrap; }
 
-  .quando-usar .label {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--chumbo);
-    margin-bottom: 4px;
-  }
+  .parte-fixa { margin: 4px 16px 16px; border-radius: 10px; overflow: hidden; border: 1px solid #3A3A4A; }
+  .parte-fixa-header { background: #1A1A2A; padding: 10px 16px; }
+  .parte-fixa-header span { font-size: 11px; font-weight: 500; color: var(--chumbo); letter-spacing: 1px; text-transform: uppercase; }
+  .parte-fixa pre { background: var(--fumaca); color: var(--nevoa); padding: 16px; font-family: 'Jost', sans-serif; font-size: 11.5px; font-weight: 300; line-height: 1.7; white-space: pre-wrap; word-break: break-word; max-height: 280px; overflow-y: auto; }
 
-  .quando-usar p {
-    font-size: 13px;
-    font-weight: 400;
-    color: var(--fumaca);
-  }
-
-  .quando-usar .anexar {
-    font-size: 11px;
-    font-weight: 300;
-    color: var(--chumbo);
-    margin-top: 4px;
-  }
-
-  /* PARTE ABERTA */
-  .parte-aberta {
-    background: var(--greenl);
-    border: 1.5px solid var(--greenborder);
-    margin: 16px;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-
-  .parte-aberta-header {
-    background: var(--green);
-    padding: 10px 16px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .parte-aberta-header span {
-    font-size: 11px;
-    font-weight: 600;
-    color: white;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-
-  .parte-aberta-body {
-    padding: 14px 16px;
-  }
-
-  .parte-aberta-body .instrucao {
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--green);
-    margin-bottom: 8px;
-  }
-
-  .parte-aberta-body textarea {
-    width: 100%;
-    min-height: 90px;
-    border: 1.5px solid var(--greenborder);
-    border-radius: 8px;
-    padding: 12px;
-    font-family: 'Jost', sans-serif;
-    font-size: 13px;
-    font-weight: 300;
-    color: var(--fumaca);
-    background: white;
-    resize: vertical;
-    outline: none;
-    line-height: 1.6;
-  }
-
-  .parte-aberta-body textarea:focus {
-    border-color: var(--green);
-  }
-
-  .parte-aberta-body .exemplo {
-    font-size: 11px;
-    font-weight: 300;
-    color: var(--green);
-    margin-top: 8px;
-    font-style: italic;
-  }
-
-  /* DIVISOR */
-  .divisor {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 0 16px;
-    margin: 4px 0;
-  }
-
-  .divisor-line {
-    flex: 1;
-    height: 1px;
-    background: #D0CADC;
-    border: none;
-    border-top: 1px dashed #B0A8BC;
-  }
-
-  .divisor-label {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--chumbo);
-    white-space: nowrap;
-  }
-
-  /* PARTE FIXA */
-  .parte-fixa {
-    margin: 4px 16px 16px;
-    border-radius: 10px;
-    overflow: hidden;
-    border: 1px solid #3A3A4A;
-  }
-
-  .parte-fixa-header {
-    background: #1A1A2A;
-    padding: 10px 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .parte-fixa-header span {
-    font-size: 11px;
-    font-weight: 500;
-    color: var(--chumbo);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-
-  .parte-fixa pre {
-    background: var(--fumaca);
-    color: var(--nevoa);
-    padding: 16px;
-    font-family: 'Jost', sans-serif;
-    font-size: 11.5px;
-    font-weight: 300;
-    line-height: 1.7;
-    white-space: pre-wrap;
-    word-break: break-word;
-    max-height: 300px;
-    overflow-y: auto;
-  }
-
-  /* BTN COPIAR */
-  .copy-btn {
-    background: var(--ametista);
-    color: white;
-    border: none;
-    padding: 14px 20px;
-    font-family: 'Jost', sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    cursor: pointer;
-    width: calc(100% - 32px);
-    margin: 0 16px 20px;
-    border-radius: 10px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: all 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-  }
-
+  .copy-btn { background: var(--ametista); color: white; border: none; padding: 14px 20px; font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 500; cursor: pointer; width: calc(100% - 32px); margin: 0 16px 20px; border-radius: 10px; letter-spacing: 1px; text-transform: uppercase; transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 8px; }
   .copy-btn:hover { background: var(--veludo); }
+  .copy-btn.copied { background: var(--green); }
 
-  .copy-btn.copied {
-    background: var(--green);
-  }
-
-  /* FOOTER */
-  .site-footer {
-    background: var(--fumaca);
-    padding: 16px 20px;
-    text-align: center;
-  }
-
-  .site-footer p {
-    font-size: 10px;
-    font-weight: 300;
-    color: var(--chumbo);
-    letter-spacing: 1px;
-  }
-
+  .site-footer { background: var(--fumaca); padding: 16px 20px; text-align: center; }
+  .site-footer p { font-size: 10px; font-weight: 300; color: var(--chumbo); letter-spacing: 1px; }
   .site-footer .gold { color: var(--dourado); }
 </style>
 </head>
@@ -424,16 +98,17 @@
 <header class="site-header">
   <p class="eyebrow">Sempre Quis Importados</p>
   <h1>Guia de Prompts</h1>
-  <p class="sub">Como criar posts no ChatGPT mantendo a identidade da marca</p>
+  <p class="sub">Como criar posts no ChatGPT com a identidade da marca</p>
 </header>
 
 <div class="instructions">
   <h2>Como usar</h2>
   <div class="steps">
-    <div class="step"><div class="step-num">1</div><span>Escolha o modelo certo pelas abas abaixo</span></div>
-    <div class="step"><div class="step-num">2</div><span>Na caixa <strong>verde</strong>, escreva com suas palavras o que você quer postar</span></div>
-    <div class="step"><div class="step-num">3</div><span>Clique em <strong>"Copiar prompt completo"</strong></span></div>
-    <div class="step"><div class="step-num">4</div><span>Cole no ChatGPT e anexe o logo + foto do produto (quando tiver)</span></div>
+    <div class="step"><div class="step-num">1</div><span>Escolha o formato: <strong>Feed</strong> ou <strong>Stories</strong></span></div>
+    <div class="step"><div class="step-num">2</div><span>Escolha o modelo certo pelas abas</span></div>
+    <div class="step"><div class="step-num">3</div><span>Na caixa <strong>verde</strong>, escreva o que você quer postar</span></div>
+    <div class="step"><div class="step-num">4</div><span>Clique em <strong>"Copiar prompt completo"</strong> e cole no ChatGPT</span></div>
+    <div class="step"><div class="step-num">5</div><span>Anexe o logo + foto do produto (quando tiver)</span></div>
   </div>
 </div>
 
@@ -441,6 +116,24 @@
   <h3>Qual logo anexar</h3>
   <p><strong>Logo extenso</strong> (Sempre Quis + IMPORTADOS): posts de feed, editoriais e tabelas.</p>
   <p><strong>Logo redondo</strong> (círculo roxo): stories e posts compactos.</p>
+</div>
+
+<!-- FORMATO TOGGLE -->
+<div class="formato-toggle">
+  <button class="formato-btn active" onclick="setFormato(&#39;feed&#39;)">
+    <span class="fmt-icon">🖼</span>
+    <div class="fmt-label">
+      <span>Feed</span>
+      <span>1080 x 1350px</span>
+    </div>
+  </button>
+  <button class="formato-btn" onclick="setFormato(&#39;stories&#39;)">
+    <span class="fmt-icon">📱</span>
+    <div class="fmt-label">
+      <span>Stories</span>
+      <span>1080 x 1920px</span>
+    </div>
+  </button>
 </div>
 
 <!-- TABS -->
@@ -453,9 +146,13 @@
 
 <!-- MODELO 01 -->
 <div class="modelo-card active" id="modelo-0">
-  <div class="modelo-header" style="background: #551FBD;">
+  <div class="modelo-header" style="background:#551FBD;">
     <p class="num">MODELO 01</p>
     <h2>Post de Produto Simples</h2>
+  </div>
+  <div class="formato-badge">
+    <span class="fmt-badge-pill" id="badge-fmt-0">🖼 Feed</span>
+    <span class="fmt-badge-size" id="badge-size-0">1080 x 1350px</span>
   </div>
   <div class="quando-usar">
     <p class="label">Quando usar</p>
@@ -463,55 +160,69 @@
     <p class="anexar">Anexar: logo extenso + foto do produto</p>
   </div>
   <div class="parte-aberta">
-    <div class="parte-aberta-header">
-      <span>✏️ Escreva aqui — só você mexe nisso</span>
-    </div>
+    <div class="parte-aberta-header"><span>✏️ Escreva aqui — só você mexe nisso</span></div>
     <div class="parte-aberta-body">
       <p class="instrucao">Descreva o produto que você quer postar:</p>
       <textarea id="open-0" placeholder="Ex: perfume da Dior, 212ml, custa R$ 890, frasco dourado, tenho foto do produto"></textarea>
       <p class="exemplo">Inclua: nome do produto, preço, tamanhos ou cores disponíveis, qualquer detalhe que queira destacar.</p>
     </div>
   </div>
-  <div class="divisor">
-    <div class="divisor-line"></div>
-    <span class="divisor-label">Parte fixa — não mexa abaixo</span>
-    <div class="divisor-line"></div>
-  </div>
+  <div class="divisor"><div class="divisor-line"></div><span class="divisor-label">Parte fixa — não mexa abaixo</span><div class="divisor-line"></div></div>
   <div class="parte-fixa">
-    <div class="parte-fixa-header">
-      <span>Prompt fixo da marca</span>
-    </div>
-    <pre id="fixed-0">You are a luxury brand visual designer creating an Instagram product post for "Sempre Quis Importados", a Brazilian luxury imported goods brand (perfumes, cosmetics, bags, electronics, sneakers).
+    <div class="parte-fixa-header"><span>Prompt fixo da marca</span></div>
+    <pre id="fixed-0-feed">You are a luxury brand visual designer creating an Instagram FEED post for "Sempre Quis Importados", a Brazilian luxury imported goods brand.
 
 Use the product info described above and the attached product photo.
 Use the attached brand logo exactly as provided — never recreate it.
 
-OUTPUT: 1080x1350px, 300dpi, PNG, Instagram feed (4:5 portrait)
+OUTPUT: 1080x1350px (4:5 portrait), 300dpi, PNG
 
-BACKGROUND: If product is dark-toned use #E8E5EB. If light-toned use #2A2A2A. Always clean and solid — never busy, textured or patterned.
+BACKGROUND: If product is dark-toned use #E8E5EB. If light-toned use #2A2A2A. Clean and solid — never busy or textured.
 
-PRODUCT: Hero of the image, minimum 55% of area. Center or slightly offset. One editorial angle only. No fake shadows or 3D effects.
+PRODUCT: Hero of the image, minimum 55% of area. Center or slightly offset. One editorial angle. No fake shadows or 3D effects.
 
-TYPOGRAPHY: Elegant serif thin weight for product name and price. Color #E8E5EB on dark bg or #2A2A2A on light bg. No bold heavy fonts. Price format: R$ X.XXX,XX. Sizes/colors in spaced uppercase, color #918894.
+TYPOGRAPHY: Elegant serif thin weight for product name and price. Color #E8E5EB on dark bg or #2A2A2A on light bg. Price format: R$ X.XXX,XX. Sizes/colors in spaced uppercase, color #918894.
 
-LOGO: Bottom right corner, 15-18% of image width, discreet. Never distort proportions.
+LOGO: Bottom right corner, 15-18% of image width, discreet. Never distort.
 
-COLOR PALETTE (strict — no other colors): #2A2A2A #E8E5EB #551FBD #C6A75C #918894
+PALETTE (strict): #2A2A2A #E8E5EB #551FBD #C6A75C #918894
 
-RULES: Max 3 text elements. No emojis. No badges. No promotional text. Generous negative space. Feeling: editorial luxury magazine, not a marketplace listing.
+RULES: Max 3 text elements. No emojis. No badges. No promotional text. Generous negative space. Feeling: luxury magazine editorial, not a marketplace listing.
 
 REFERENCE: Dior Beauty, YSL Beauty, Guerlain Instagram posts.</pre>
+    <pre id="fixed-0-stories" style="display:none;">You are a luxury brand visual designer creating an Instagram STORIES post for "Sempre Quis Importados", a Brazilian luxury imported goods brand.
+
+Use the product info described above and the attached product photo.
+Use the attached brand logo exactly as provided — never recreate it.
+
+OUTPUT: 1080x1920px (9:16 vertical), 300dpi, PNG
+
+BACKGROUND: If product is dark-toned use #E8E5EB. If light-toned use #2A2A2A. Clean and solid — never busy or textured.
+
+PRODUCT: Dominant hero, centered or upper half of frame. Large and impactful. Clean cutout or minimal background. No fake shadows or 3D effects.
+
+TYPOGRAPHY: Keep text minimal — Stories are read in seconds. Product name: elegant serif, large, top or bottom area. Price: bold, prominent, color #C6A75C (gold). No long descriptions.
+
+LOGO: Bottom center, small and discreet. Use the rounded circle version.
+
+PALETTE (strict): #2A2A2A #E8E5EB #551FBD #C6A75C #918894
+
+RULES: Max 2 text elements. No emojis. No badges. Strong visual impact. Fast readability. Feeling: luxury boutique window display.
+
+REFERENCE: Dior Beauty Stories, YSL Beauty Stories format.</pre>
   </div>
-  <button class="copy-btn" onclick="copyPrompt(0)">
-    📋 Copiar prompt completo
-  </button>
+  <button class="copy-btn" onclick="copyPrompt(0)">📋 Copiar prompt completo</button>
 </div>
 
 <!-- MODELO 02 -->
 <div class="modelo-card" id="modelo-1">
-  <div class="modelo-header" style="background: #2E063D;">
+  <div class="modelo-header" style="background:#2E063D;">
     <p class="num">MODELO 02</p>
     <h2>Tabela de Preços</h2>
+  </div>
+  <div class="formato-badge">
+    <span class="fmt-badge-pill" id="badge-fmt-1">🖼 Feed</span>
+    <span class="fmt-badge-size" id="badge-size-1">1080 x 1350px</span>
   </div>
   <div class="quando-usar">
     <p class="label">Quando usar</p>
@@ -519,57 +230,73 @@ REFERENCE: Dior Beauty, YSL Beauty, Guerlain Instagram posts.</pre>
     <p class="anexar">Anexar: logo extenso. Sem foto de produto.</p>
   </div>
   <div class="parte-aberta">
-    <div class="parte-aberta-header">
-      <span>✏️ Escreva aqui — só você mexe nisso</span>
-    </div>
+    <div class="parte-aberta-header"><span>✏️ Escreva aqui — só você mexe nisso</span></div>
     <div class="parte-aberta-body">
       <p class="instrucao">Descreva os produtos e preços que você quer na tabela:</p>
-      <textarea id="open-1" placeholder="Ex: iPhone 16 preto R$ 5.800, iPhone 16 azul R$ 5.900, válido hoje até 18h, valores podem mudar"></textarea>
-      <p class="exemplo">Inclua: categoria, todos os itens com preços, algum aviso e data de validade.</p>
+      <textarea id="open-1" placeholder="Ex: iPhone 16 preto R$ 5.800, iPhone 16 azul R$ 5.900, válido hoje até 18h"></textarea>
+      <p class="exemplo">Inclua: categoria, todos os itens com preços, aviso e data de validade.</p>
     </div>
   </div>
-  <div class="divisor">
-    <div class="divisor-line"></div>
-    <span class="divisor-label">Parte fixa — não mexa abaixo</span>
-    <div class="divisor-line"></div>
-  </div>
+  <div class="divisor"><div class="divisor-line"></div><span class="divisor-label">Parte fixa — não mexa abaixo</span><div class="divisor-line"></div></div>
   <div class="parte-fixa">
-    <div class="parte-fixa-header">
-      <span>Prompt fixo da marca</span>
-    </div>
-    <pre id="fixed-1">You are a luxury brand visual designer creating a price list post for "Sempre Quis Importados", a Brazilian luxury imported goods brand.
+    <div class="parte-fixa-header"><span>Prompt fixo da marca</span></div>
+    <pre id="fixed-1-feed">You are a luxury brand visual designer creating an Instagram FEED price list for "Sempre Quis Importados", a Brazilian luxury imported goods brand.
 
 Use the product and price info described above.
 Use the attached brand logo exactly as provided — never recreate it.
 
-OUTPUT: 1080x1920px, 300dpi, PNG, Instagram Stories/Feed vertical (9:16)
+OUTPUT: 1080x1350px (4:5 portrait), 300dpi, PNG
 
-BACKGROUND: #1E1E1E main background. Never pure black. Subtle dark gradient to #2E063D allowed at edges only.
+BACKGROUND: #1E1E1E main. Subtle dark gradient to #2E063D allowed at edges only.
 
 HEADER: Category name large, bold, all caps, color #E8E5EB. Thin gold line #C6A75C separating header from content.
 
-PRICE CARDS: Each product gets its own card. Card bg: #2A2A2A. Card border: 1px #551FBD, thin and elegant. Product name: #E8E5EB bold. Specs: #918894 smaller. Price: #C6A75C (gold), large and prominent. Format: R$ X.XXX. Multiple price tiers: use divider lines #3D1280. Generous spacing between cards — never cramped.
+PRICE CARDS: Each product gets its own card. Card bg: #2A2A2A. Border: 1px #551FBD. Product name: #E8E5EB bold. Specs: #918894 smaller. Price: #C6A75C large. Format: R$ X.XXX. Generous spacing between cards.
 
-DISCLAIMER AND DATE: Bottom area, color #918894. Small text.
+DISCLAIMER: Bottom area, color #918894, small text.
 
-LOGO: Footer area, centered, light version, gold separator line above.
+LOGO: Footer, centered, light version, gold separator line above.
 
-COLOR PALETTE (strict): #1E1E1E #2A2A2A #2E063D #551FBD #C6A75C #E8E5EB #918894
+PALETTE (strict): #1E1E1E #2A2A2A #2E063D #551FBD #C6A75C #E8E5EB #918894
 
-RULES: No emojis. No rainbow colors. No neon. Never looks like a street market price list.
+RULES: No emojis. No neon colors. Never looks like a street market price list.
 
 REFERENCE: Apple Store pricing meets luxury boutique aesthetic.</pre>
+    <pre id="fixed-1-stories" style="display:none;">You are a luxury brand visual designer creating an Instagram STORIES price list for "Sempre Quis Importados", a Brazilian luxury imported goods brand.
+
+Use the product and price info described above.
+Use the attached brand logo exactly as provided — never recreate it.
+
+OUTPUT: 1080x1920px (9:16 vertical), 300dpi, PNG
+
+BACKGROUND: #1E1E1E main. Subtle dark gradient to #2E063D allowed at edges only.
+
+HEADER: Category name large, bold, all caps, top of frame, color #E8E5EB. Thin gold line #C6A75C below header.
+
+PRICE CARDS: Full-width stacked cards. Card bg: #2A2A2A. Border: 1px #551FBD. Product name: #E8E5EB bold, larger than feed version for mobile readability. Price: #C6A75C very large and prominent. Generous spacing — Stories are read fast, info must be instantly clear.
+
+DISCLAIMER: Near bottom, color #918894.
+
+LOGO: Bottom center, rounded version preferred, small.
+
+PALETTE (strict): #1E1E1E #2A2A2A #2E063D #551FBD #C6A75C #E8E5EB #918894
+
+RULES: Fewer items per screen than feed. Prioritize legibility at mobile size. No emojis. No neon.
+
+REFERENCE: Premium tech store Stories format.</pre>
   </div>
-  <button class="copy-btn" onclick="copyPrompt(1)">
-    📋 Copiar prompt completo
-  </button>
+  <button class="copy-btn" onclick="copyPrompt(1)">📋 Copiar prompt completo</button>
 </div>
 
 <!-- MODELO 03 -->
 <div class="modelo-card" id="modelo-2">
-  <div class="modelo-header" style="background: #7A3494;">
+  <div class="modelo-header" style="background:#7A3494;">
     <p class="num">MODELO 03</p>
     <h2>Post Editorial</h2>
+  </div>
+  <div class="formato-badge">
+    <span class="fmt-badge-pill" id="badge-fmt-2">🖼 Feed</span>
+    <span class="fmt-badge-size" id="badge-size-2">1080 x 1350px</span>
   </div>
   <div class="quando-usar">
     <p class="label">Quando usar</p>
@@ -577,59 +304,75 @@ REFERENCE: Apple Store pricing meets luxury boutique aesthetic.</pre>
     <p class="anexar">Anexar: logo extenso + fotos dos produtos</p>
   </div>
   <div class="parte-aberta">
-    <div class="parte-aberta-header">
-      <span>✏️ Escreva aqui — só você mexe nisso</span>
-    </div>
+    <div class="parte-aberta-header"><span>✏️ Escreva aqui — só você mexe nisso</span></div>
     <div class="parte-aberta-body">
       <p class="instrucao">Descreva o que você quer neste post editorial:</p>
-      <textarea id="open-2" placeholder="Ex: quero um post sobre perfumes árabes, tenho 3 fotos, clima misterioso e luxuoso, marcas: Lattafa e Maison Oud"></textarea>
-      <p class="exemplo">Inclua: tema ou campanha, marcas ou produtos que aparecem, clima que quer passar.</p>
+      <textarea id="open-2" placeholder="Ex: post sobre perfumes árabes, tenho 3 fotos, clima misterioso e luxuoso, marcas: Lattafa e Maison Oud"></textarea>
+      <p class="exemplo">Inclua: tema ou campanha, marcas ou produtos, clima que quer passar.</p>
     </div>
   </div>
-  <div class="divisor">
-    <div class="divisor-line"></div>
-    <span class="divisor-label">Parte fixa — não mexa abaixo</span>
-    <div class="divisor-line"></div>
-  </div>
+  <div class="divisor"><div class="divisor-line"></div><span class="divisor-label">Parte fixa — não mexa abaixo</span><div class="divisor-line"></div></div>
   <div class="parte-fixa">
-    <div class="parte-fixa-header">
-      <span>Prompt fixo da marca</span>
-    </div>
-    <pre id="fixed-2">You are a luxury brand creative director creating an editorial campaign post for "Sempre Quis Importados", a Brazilian luxury imported goods brand (perfumes, cosmetics, bags, electronics).
+    <div class="parte-fixa-header"><span>Prompt fixo da marca</span></div>
+    <pre id="fixed-2-feed">You are a luxury brand creative director creating an editorial campaign FEED post for "Sempre Quis Importados", a Brazilian luxury imported goods brand.
 
 Use the theme, products and mood described above and the attached product photos.
 Use the attached brand logo exactly as provided — never recreate it.
 
-OUTPUT: 1080x1350px, 300dpi, PNG, Instagram feed (4:5 portrait)
+OUTPUT: 1080x1350px (4:5 portrait), 300dpi, PNG
 
-BACKGROUND: #E8E5EB for colorful products OR #2A2A2A for dark/dramatic mood. Subtle gradient allowed. Never busy, textured or competing with products.
+BACKGROUND: #E8E5EB for colorful products OR #2A2A2A for dark dramatic mood. Never busy or textured.
 
-PRODUCT COMPOSITION: Editorial arrangement — NOT a flat grid or catalog. Overlapping, varied heights, layered. Products styled as if by a professional photographer. 1 product: hero dominant. 2-4: editorial grouping. 5+: styled flat lay.
+PRODUCT COMPOSITION: Editorial arrangement — NOT a flat grid. Overlapping, varied heights, layered. Styled as if by a professional photographer.
 
-HEADLINE: Large, dominant, high-contrast serif (thick/thin strokes). Color: #2E063D on light bg or #E8E5EB on dark bg. Some words heavy, some light for editorial contrast. Wider letter spacing. Never rounded or generic sans-serif.
+HEADLINE: Large, dominant, high-contrast serif. Color: #2E063D on light or #E8E5EB on dark. Editorial contrast between heavy and light words. Never rounded or generic fonts.
 
-SUBHEADLINE: Clean light sans-serif, spaced, small, color #918894. Optional thin gold line or small star between headline and subheadline.
+SUBHEADLINE: Clean light sans-serif, small, color #918894.
 
-BRAND LISTING: Bottom, separated by bullets: Dior • YSL • KIKO. Spaced sans-serif, small, color #918894. Never list prices here.
+BRAND LISTING: Bottom, separated by bullets: Brand • Brand • Brand. Color #918894. Never list prices here.
 
-LOGO: Bottom right, small and elegant — logo is a signature here.
+LOGO: Bottom right, small, signature-style.
 
-COLOR PALETTE (strict): #E8E5EB #2A2A2A #2E063D #551FBD #C6A75C #918894
+PALETTE (strict): #E8E5EB #2A2A2A #2E063D #551FBD #C6A75C #918894
 
-RULES: No price tags. No promotional badges. No emojis. No busy layouts. Feeling: Vogue Brasil or Harper's Bazaar page — not a store promotion.
+RULES: No price tags. No promotional badges. No emojis. Feeling: Vogue Brasil editorial page.
 
 REFERENCE: Sephora campaigns, Dior Beauty editorial, Net-a-Porter lookbook.</pre>
+    <pre id="fixed-2-stories" style="display:none;">You are a luxury brand creative director creating an editorial campaign STORY for "Sempre Quis Importados", a Brazilian luxury imported goods brand.
+
+Use the theme, products and mood described above and the attached product photos.
+Use the attached brand logo exactly as provided — never recreate it.
+
+OUTPUT: 1080x1920px (9:16 vertical), 300dpi, PNG
+
+BACKGROUND: #E8E5EB for colorful products OR #2A2A2A for dark dramatic mood.
+
+PRODUCT COMPOSITION: One or two hero products, large and dominant, filling most of the vertical frame. Strong visual impact optimized for phone screen. Products centered or slightly upper frame.
+
+HEADLINE: Short, punchy, large. Top or bottom of frame. High-contrast serif. Color: #2E063D on light or #E8E5EB on dark.
+
+SUBHEADLINE: Optional. Very short — max 5 words. Color #918894.
+
+LOGO: Bottom center, rounded version preferred.
+
+PALETTE (strict): #E8E5EB #2A2A2A #2E063D #551FBD #C6A75C #918894
+
+RULES: Less text than feed version. Strong single visual statement. No promotional badges. No emojis.
+
+REFERENCE: Luxury brand Stories format — bold, minimal, impactful.</pre>
   </div>
-  <button class="copy-btn" onclick="copyPrompt(2)">
-    📋 Copiar prompt completo
-  </button>
+  <button class="copy-btn" onclick="copyPrompt(2)">📋 Copiar prompt completo</button>
 </div>
 
 <!-- MODELO 04 -->
 <div class="modelo-card" id="modelo-3">
-  <div class="modelo-header" style="background: #3D1280;">
+  <div class="modelo-header" style="background:#3D1280;">
     <p class="num">MODELO 04</p>
     <h2>Post Informativo</h2>
+  </div>
+  <div class="formato-badge">
+    <span class="fmt-badge-pill" id="badge-fmt-3">🖼 Feed</span>
+    <span class="fmt-badge-size" id="badge-size-3">1080 x 1350px</span>
   </div>
   <div class="quando-usar">
     <p class="label">Quando usar</p>
@@ -637,50 +380,62 @@ REFERENCE: Sephora campaigns, Dior Beauty editorial, Net-a-Porter lookbook.</pre
     <p class="anexar">Anexar: logo extenso ou redondo. Sem foto necessária.</p>
   </div>
   <div class="parte-aberta">
-    <div class="parte-aberta-header">
-      <span>✏️ Escreva aqui — só você mexe nisso</span>
-    </div>
+    <div class="parte-aberta-header"><span>✏️ Escreva aqui — só você mexe nisso</span></div>
     <div class="parte-aberta-body">
       <p class="instrucao">Descreva o que você quer explicar neste post:</p>
-      <textarea id="open-3" placeholder="Ex: quero explicar os benefícios do perfume Baccarat Rouge 540, listar 5 motivos pra comprar, tom sofisticado"></textarea>
-      <p class="exemplo">Inclua: assunto, tópicos ou informações que devem aparecer, tom que quer passar.</p>
+      <textarea id="open-3" placeholder="Ex: quero explicar os benefícios do Baccarat Rouge 540, listar 5 motivos pra comprar, tom sofisticado"></textarea>
+      <p class="exemplo">Inclua: assunto, tópicos que devem aparecer, tom que quer passar.</p>
     </div>
   </div>
-  <div class="divisor">
-    <div class="divisor-line"></div>
-    <span class="divisor-label">Parte fixa — não mexa abaixo</span>
-    <div class="divisor-line"></div>
-  </div>
+  <div class="divisor"><div class="divisor-line"></div><span class="divisor-label">Parte fixa — não mexa abaixo</span><div class="divisor-line"></div></div>
   <div class="parte-fixa">
-    <div class="parte-fixa-header">
-      <span>Prompt fixo da marca</span>
-    </div>
-    <pre id="fixed-3">You are a luxury brand content designer creating an informative educational post for "Sempre Quis Importados", a Brazilian luxury imported goods brand.
+    <div class="parte-fixa-header"><span>Prompt fixo da marca</span></div>
+    <pre id="fixed-3-feed">You are a luxury brand content designer creating an informative FEED post for "Sempre Quis Importados", a Brazilian luxury imported goods brand.
 
 Use the topic and content described above.
 Use the attached brand logo exactly as provided — never recreate it.
 
-OUTPUT: 1080x1350px for short content, 1080x1920px for longer content. Choose based on amount of information. 300dpi, PNG.
+OUTPUT: 1080x1350px (4:5 portrait), 300dpi, PNG
 
-BACKGROUND: Educational mood: #E8E5EB (light, airy). Premium/authority mood: #2A2A2A (dark, prestigious). Never pure white or pure black. No textures or patterns.
+BACKGROUND: Educational mood: #E8E5EB (light, airy). Premium mood: #2A2A2A (dark, prestigious). Never pure white or black. No textures.
 
-HEADER: Main title large and bold. Color: #551FBD on light bg, #E8E5EB on dark bg. Thin gold separator line #C6A75C below title. Optional pill tag above title: bg #551FBD, white text, all caps spaced.
+HEADER: Main title large and bold. Color: #551FBD on light, #E8E5EB on dark. Thin gold separator line #C6A75C below title.
 
-CONTENT SECTIONS: Each topic gets a thin line-style icon + bold title + short text. Icons: minimal, modern, color #551FBD — never cartoonish. Section title: semi-bold, #551FBD or #2E063D. Body text: light weight, max 2 lines per section. Never long paragraphs. Never cramped.
+CONTENT SECTIONS: Each topic: thin line-style icon + bold title + max 2 lines of text. Icons: minimal, modern, color #551FBD. Never cartoonish. Never long paragraphs.
 
-SPACING: Generous padding everywhere. Consistent spacing. If content is short: use larger text and more negative space.
+SPACING: Generous padding. Consistent spacing between sections.
 
 LOGO: Bottom center or right, small, gold separator line above.
 
-COLOR PALETTE (strict): #E8E5EB #2A2A2A #551FBD #2E063D #C6A75C #545157 #918894
+PALETTE (strict): #E8E5EB #2A2A2A #551FBD #2E063D #C6A75C #545157 #918894
 
-RULES: No emojis. No prices. No promotional text. No bullet walls of text. Feeling: premium wellness brand guide — never looks like a pharmacy flyer.
+RULES: No emojis. No prices. No promotional text. Feeling: premium wellness brand guide.
 
-REFERENCE: La Mer education posts, Elemis how-to, Sephora ingredient guides.</pre>
+REFERENCE: La Mer education posts, Sephora ingredient guides.</pre>
+    <pre id="fixed-3-stories" style="display:none;">You are a luxury brand content designer creating an informative STORY for "Sempre Quis Importados", a Brazilian luxury imported goods brand.
+
+Use the topic and content described above.
+Use the attached brand logo exactly as provided — never recreate it.
+
+OUTPUT: 1080x1920px (9:16 vertical), 300dpi, PNG
+
+BACKGROUND: Educational mood: #E8E5EB. Premium mood: #2A2A2A. No textures.
+
+HEADER: Title at top, large, bold, color #551FBD on light or #E8E5EB on dark. Gold line #C6A75C below.
+
+CONTENT: Maximum 3-4 topics for Stories format — keep it scannable. Each topic: icon + title + 1 line of text. Large enough to read on phone without zooming.
+
+SPACING: Very generous. Stories are read fast — content must breathe.
+
+LOGO: Bottom center, rounded version preferred, small.
+
+PALETTE (strict): #E8E5EB #2A2A2A #551FBD #2E063D #C6A75C #545157 #918894
+
+RULES: Fewer topics than feed. Prioritize legibility. No emojis. No prices.
+
+REFERENCE: Premium brand educational Stories format.</pre>
   </div>
-  <button class="copy-btn" onclick="copyPrompt(3)">
-    📋 Copiar prompt completo
-  </button>
+  <button class="copy-btn" onclick="copyPrompt(3)">📋 Copiar prompt completo</button>
 </div>
 
 <footer class="site-footer">
@@ -688,33 +443,44 @@ REFERENCE: La Mer education posts, Elemis how-to, Sephora ingredient guides.</pr
 </footer>
 
 <script>
+let currentFormato = 'feed';
+
+function setFormato(fmt) {
+  currentFormato = fmt;
+  document.querySelectorAll('.formato-btn').forEach((btn, i) => {
+    btn.classList.toggle('active', (i === 0 && fmt === 'feed') || (i === 1 && fmt === 'stories'));
+  });
+  const isFeed = fmt === 'feed';
+  const icon = isFeed ? '🖼 Feed' : '📱 Stories';
+  const size = isFeed ? '1080 x 1350px' : '1080 x 1920px';
+  for (let i = 0; i < 4; i++) {
+    document.getElementById('badge-fmt-' + i).textContent = icon;
+    document.getElementById('badge-size-' + i).textContent = size;
+    const feedPre = document.getElementById('fixed-' + i + '-feed');
+    const storiesPre = document.getElementById('fixed-' + i + '-stories');
+    if (feedPre) feedPre.style.display = isFeed ? 'block' : 'none';
+    if (storiesPre) storiesPre.style.display = isFeed ? 'none' : 'block';
+  }
+}
+
 function switchTab(index) {
-  document.querySelectorAll('.tab-btn').forEach((btn, i) => {
-    btn.classList.toggle('active', i === index);
-  });
-  document.querySelectorAll('.modelo-card').forEach((card, i) => {
-    card.classList.toggle('active', i === index);
-  });
+  document.querySelectorAll('.tab-btn').forEach((btn, i) => btn.classList.toggle('active', i === index));
+  document.querySelectorAll('.modelo-card').forEach((card, i) => card.classList.toggle('active', i === index));
 }
 
 function copyPrompt(index) {
   const openText = document.getElementById('open-' + index).value.trim();
-  const fixedText = document.getElementById('fixed-' + index).textContent.trim();
-
-  let userPart = openText
-    ? `INFORMAÇÕES DO PRODUTO / POST:\n${openText}\n\n---\n\n`
+  const fixedId = 'fixed-' + index + '-' + currentFormato;
+  const fixedText = document.getElementById(fixedId).textContent.trim();
+  const userPart = openText
+    ? 'INFORMAÇÕES DO PRODUTO / POST:\n' + openText + '\n\n---\n\n'
     : '[PREENCHA A PARTE VERDE ANTES DE COPIAR]\n\n---\n\n';
-
   const fullPrompt = userPart + fixedText;
-
   navigator.clipboard.writeText(fullPrompt).then(() => {
     const btn = document.querySelectorAll('.copy-btn')[index];
     btn.textContent = '✅ Copiado!';
     btn.classList.add('copied');
-    setTimeout(() => {
-      btn.textContent = '📋 Copiar prompt completo';
-      btn.classList.remove('copied');
-    }, 2500);
+    setTimeout(() => { btn.textContent = '📋 Copiar prompt completo'; btn.classList.remove('copied'); }, 2500);
   }).catch(() => {
     const ta = document.createElement('textarea');
     ta.value = fullPrompt;
@@ -725,10 +491,7 @@ function copyPrompt(index) {
     const btn = document.querySelectorAll('.copy-btn')[index];
     btn.textContent = '✅ Copiado!';
     btn.classList.add('copied');
-    setTimeout(() => {
-      btn.textContent = '📋 Copiar prompt completo';
-      btn.classList.remove('copied');
-    }, 2500);
+    setTimeout(() => { btn.textContent = '📋 Copiar prompt completo'; btn.classList.remove('copied'); }, 2500);
   });
 }
 </script>
