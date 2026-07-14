@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0046)file:///C:/Users/Lucas/Downloads/index_21.html -->
+<!-- saved from url=(0046)file:///C:/Users/Lucas/Downloads/index_22.html -->
 <html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -784,7 +784,7 @@ Tone: confident, minimal. Like a luxury brand Stories frame.
 Deliver both versions clearly labeled "WHATSAPP:" and "INSTAGRAM STORIES:"
 Write in Brazilian Portuguese. No English in the captions.</pre>
   </div>
-  <button class="copy-btn" onclick="copyPrompt(4)" style="background:#C6A75C; color:#1A1A1A;">✍️ Copiar prompt de texto</button>
+  <button class="copy-btn" id="copy-btn-4" onclick="copyPrompt(4)" style="background:#C6A75C; color:#1A1A1A;">✍️ Gerar legenda — copiar prompt</button>
 </div>
 
 <footer class="site-footer">
@@ -862,11 +862,14 @@ function copyPrompt(index) {
 
   const fullPrompt = userPart + fixedText;
 
+  const isTexto = index === 4;
+  const originalLabel = isTexto ? '✍️ Gerar legenda — copiar prompt' : '📋 Copiar prompt completo';
+  const btn = document.querySelectorAll('.copy-btn')[index];
+
   navigator.clipboard.writeText(fullPrompt).then(() => {
-    const btn = document.querySelectorAll('.copy-btn')[index];
-    btn.textContent = '✅ Copiado!';
+    btn.textContent = '✅ Copiado! Cole no ChatGPT agora.';
     btn.classList.add('copied');
-    setTimeout(() => { btn.textContent = '📋 Copiar prompt completo'; btn.classList.remove('copied'); }, 2500);
+    setTimeout(() => { btn.textContent = originalLabel; btn.classList.remove('copied'); }, 3000);
   }).catch(() => {
     const ta = document.createElement('textarea');
     ta.value = fullPrompt;
@@ -874,10 +877,9 @@ function copyPrompt(index) {
     ta.select();
     document.execCommand('copy');
     document.body.removeChild(ta);
-    const btn = document.querySelectorAll('.copy-btn')[index];
-    btn.textContent = '✅ Copiado!';
+    btn.textContent = '✅ Copiado! Cole no ChatGPT agora.';
     btn.classList.add('copied');
-    setTimeout(() => { btn.textContent = '📋 Copiar prompt completo'; btn.classList.remove('copied'); }, 2500);
+    setTimeout(() => { btn.textContent = originalLabel; btn.classList.remove('copied'); }, 3000);
   });
 }
 </script>
