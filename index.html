@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0046)file:///C:/Users/Lucas/Downloads/index_20.html -->
+<!-- saved from url=(0046)file:///C:/Users/Lucas/Downloads/index_21.html -->
 <html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -151,6 +151,7 @@
   <button class="tab-btn" onclick="switchTab(1)"><span>02</span>Tabela</button>
   <button class="tab-btn" onclick="switchTab(2)"><span>03</span>Editorial</button>
   <button class="tab-btn" onclick="switchTab(3)"><span>04</span>Informativo</button>
+  <button class="tab-btn" onclick="switchTab(4)" style="background:#3A3A2A; color:#C6A75C;"><span>✍️</span>Texto</button>
 </div>
 
 <!-- MODELO 01 -->
@@ -634,6 +635,158 @@ REFERENCE: Premium brand educational Stories format.</pre>
   <button class="copy-btn" onclick="copyPrompt(3)">📋 Copiar prompt completo</button>
 </div>
 
+<!-- MODELO 05 -->
+<div class="modelo-card" id="modelo-4">
+  <div class="modelo-header" style="background:#2A2A2A; border-bottom: 2px solid #C6A75C;">
+    <p class="num">MODELO 05</p>
+    <h2>Texto do Post</h2>
+  </div>
+  <div class="formato-badge">
+    <span class="fmt-badge-pill" id="badge-fmt-4" style="background:#C6A75C; color:#1A1A1A;">✍️ Legenda</span>
+    <span class="fmt-badge-size" id="badge-size-4">WhatsApp + Instagram</span>
+  </div>
+  <div class="quando-usar">
+    <p class="label">Quando usar</p>
+    <p>Gerar legenda pronta pra WhatsApp e Instagram</p>
+    <p class="anexar">Não precisa anexar nada. Só preencher abaixo.</p>
+  </div>
+  <div class="parte-aberta">
+    <div class="parte-aberta-header"><span>✏️ Preencha aqui — só você mexe nisso</span></div>
+    <div class="parte-aberta-body">
+      <p class="instrucao">Nome do produto, preço e parcelamento:</p>
+      <textarea id="open-4" placeholder="Ex: Hugo Boss Bottled Night 100ml, R$ 350,00, 5x de R$ 73,98"></textarea>
+      <p class="exemplo">Inclua: nome, ml se for perfume, preço à vista e parcelamento.</p>
+      <div class="seletores" id="sel-4">
+        <div class="seletor-grupo">
+          <p class="seletor-label">Clima / Mood</p>
+          <div class="seletor-opcoes">
+            <button class="sel-btn" onclick="toggleSel(this,&#39;clima&#39;,4)">Sofisticado</button>
+            <button class="sel-btn" onclick="toggleSel(this,&#39;clima&#39;,4)">Misterioso</button>
+            <button class="sel-btn" onclick="toggleSel(this,&#39;clima&#39;,4)">Romântico</button>
+            <button class="sel-btn" onclick="toggleSel(this,&#39;clima&#39;,4)">Poderoso</button>
+            <button class="sel-btn" onclick="toggleSel(this,&#39;clima&#39;,4)">Delicado</button>
+            <button class="sel-btn" onclick="toggleSel(this,&#39;clima&#39;,4)">Fresco / Clean</button>
+            <button class="sel-btn" onclick="toggleSel(this,&#39;clima&#39;,4)">Sensual</button>
+            <button class="sel-btn" onclick="toggleSel(this,&#39;clima&#39;,4)">Festivo</button>
+            <button class="sel-btn" onclick="toggleSel(this,&#39;clima&#39;,4)">Minimalista</button>
+            <button class="sel-btn" onclick="toggleSel(this,&#39;clima&#39;,4)">Premium / Luxo</button>
+          </div>
+        </div>
+        <div class="seletor-grupo">
+          <p class="seletor-label">Público / Para quem</p>
+          <div class="seletor-opcoes">
+            <button class="sel-btn" onclick="toggleSel(this,&#39;publico&#39;,4)">Para ela</button>
+            <button class="sel-btn" onclick="toggleSel(this,&#39;publico&#39;,4)">Para ele</button>
+            <button class="sel-btn" onclick="toggleSel(this,&#39;publico&#39;,4)">Para presentear</button>
+            <button class="sel-btn" onclick="toggleSel(this,&#39;publico&#39;,4)">Para os dois</button>
+          </div>
+        </div>
+        <div class="seletor-grupo">
+          <p class="seletor-label">Hora do post</p>
+          <div class="seletor-opcoes">
+            <button class="sel-btn" onclick="toggleSel(this,&#39;hora&#39;,4)">Manhã</button>
+            <button class="sel-btn" onclick="toggleSel(this,&#39;hora&#39;,4)">Tarde</button>
+            <button class="sel-btn" onclick="toggleSel(this,&#39;hora&#39;,4)">Noite</button>
+          </div>
+        </div>
+        <div class="seletor-grupo">
+          <p class="seletor-label">Ocasião</p>
+          <div class="seletor-opcoes">
+            <button class="sel-btn" onclick="toggleSel(this,&#39;ocasiao&#39;,4)">Dia a dia</button>
+            <button class="sel-btn" onclick="toggleSel(this,&#39;ocasiao&#39;,4)">Promoção Relâmpago</button>
+            <button class="sel-btn" onclick="toggleSel(this,&#39;ocasiao&#39;,4)">Lançamento</button>
+            <button class="sel-btn" onclick="toggleSel(this,&#39;ocasiao&#39;,4)">Dia dos Namorados</button>
+            <button class="sel-btn" onclick="toggleSel(this,&#39;ocasiao&#39;,4)">Dia das Mães</button>
+            <button class="sel-btn" onclick="toggleSel(this,&#39;ocasiao&#39;,4)">Natal / Fim de ano</button>
+            <button class="sel-btn" onclick="toggleSel(this,&#39;ocasiao&#39;,4)">Aniversário</button>
+            <button class="sel-btn" onclick="toggleSel(this,&#39;ocasiao&#39;,4)">Black Friday</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="divisor"><div class="divisor-line"></div><span class="divisor-label">Parte fixa — não mexa abaixo</span><div class="divisor-line"></div></div>
+  <div class="parte-fixa">
+    <div class="parte-fixa-header"><span>Prompt fixo da marca</span></div>
+    <pre id="fixed-4-feed">You are a copywriter for "Sempre Quis Importados", a Brazilian luxury imported goods brand. Write product captions in Portuguese (Brazil).
+
+Use the product info and selections above to write TWO versions of the caption:
+
+---
+
+VERSION 1 — WHATSAPP (grupo VIP)
+Format: direct, warm, commercial. Short and scannable.
+Structure:
+- Line 1: one short sentence that creates desire for the product (no emoji at start, no "PROMO" in caps)
+- Empty line
+- Product name bold (use *asterisks* for bold in WhatsApp)
+- 💰 Price: R$ X.XXX,XX
+- 💳 Xx de R$ XX,XX (installments)
+- Sizes/colors if applicable (bullet with •)
+- Empty line
+- ⚠️ Valores sujeitos a alteração sem aviso prévio.
+- Empty line
+- One short CTA line: "Chama no direct pra garantir o seu 🤍" or similar, warm and personal
+
+Tone: like a knowledgeable friend who found something amazing and wants to share. Not a salesperson. Not generic. The brand is Sempre Quis Importados — sophisticated but accessible.
+
+---
+
+VERSION 2 — INSTAGRAM (feed or stories)
+Format: editorial, aspirational. No price mentioned.
+Structure:
+- 2-3 sentences maximum that evoke desire, not information
+- Focus on the feeling, not the product specs
+- End with a soft CTA: "Link na bio." or "Chama no direct." — nothing more
+- 3-5 hashtags only, specific and relevant: mix of brand hashtag (#semprequis) + product category + occasion if applicable
+
+Tone: luxury perfumery editorial. Think Dior, YSL captions — short, evocative, confident.
+
+---
+
+Deliver both versions clearly labeled "WHATSAPP:" and "INSTAGRAM:"
+Write in Brazilian Portuguese. No English in the captions.</pre>
+    <pre id="fixed-4-stories" style="display:none;">You are a copywriter for "Sempre Quis Importados", a Brazilian luxury imported goods brand. Write product captions in Portuguese (Brazil).
+
+Use the product info and selections above to write TWO versions of the caption:
+
+---
+
+VERSION 1 — WHATSAPP (grupo VIP)
+Format: direct, warm, commercial. Short and scannable.
+Structure:
+- Line 1: one short sentence that creates desire for the product (no emoji at start, no "PROMO" in caps)
+- Empty line
+- Product name bold (use *asterisks* for bold in WhatsApp)
+- 💰 Price: R$ X.XXX,XX
+- 💳 Xx de R$ XX,XX (installments)
+- Sizes/colors if applicable (bullet with •)
+- Empty line
+- ⚠️ Valores sujeitos a alteração sem aviso prévio.
+- Empty line
+- One short CTA line: "Chama no direct pra garantir o seu 🤍" or similar, warm and personal
+
+Tone: like a knowledgeable friend who found something amazing and wants to share. Not a salesperson. Not generic. The brand is Sempre Quis Importados — sophisticated but accessible.
+
+---
+
+VERSION 2 — INSTAGRAM STORIES
+Format: ultra short. Stories are read in 2 seconds.
+Structure:
+- 1 sentence maximum — punchy, evocative, desire-inducing
+- CTA: "Arrasta pra cima 🤍" or "Chama no direct."
+- 2-3 hashtags only: #semprequis + 1-2 relevant ones
+
+Tone: confident, minimal. Like a luxury brand Stories frame.
+
+---
+
+Deliver both versions clearly labeled "WHATSAPP:" and "INSTAGRAM STORIES:"
+Write in Brazilian Portuguese. No English in the captions.</pre>
+  </div>
+  <button class="copy-btn" onclick="copyPrompt(4)" style="background:#C6A75C; color:#1A1A1A;">✍️ Copiar prompt de texto</button>
+</div>
+
 <footer class="site-footer">
   <p>Sempre Quis Importados &nbsp;|&nbsp; <span class="gold">Kukai</span> &nbsp;|&nbsp; 2026</p>
 </footer>
@@ -647,6 +800,7 @@ const selections = {
   1: { clima: null, publico: null, hora: null, ocasiao: null },
   2: { clima: null, publico: null, hora: null, ocasiao: null },
   3: { clima: null, publico: null, hora: null, ocasiao: null },
+  4: { clima: null, publico: null, hora: null, ocasiao: null },
 };
 
 function toggleSel(btn, tipo, modeloIdx) {
@@ -668,9 +822,16 @@ function setFormato(fmt) {
   const isFeed = fmt === 'feed';
   const icon = isFeed ? '🖼 Feed' : '📱 Stories';
   const size = isFeed ? '1080 x 1350px' : '1080 x 1920px';
-  for (let i = 0; i < 4; i++) {
-    document.getElementById('badge-fmt-' + i).textContent = icon;
-    document.getElementById('badge-size-' + i).textContent = size;
+  for (let i = 0; i < 5; i++) {
+    const badgeFmt = document.getElementById('badge-fmt-' + i);
+    const badgeSize = document.getElementById('badge-size-' + i);
+    if (i === 4) {
+      if (badgeFmt) badgeFmt.textContent = '✍️ Legenda';
+      if (badgeSize) badgeSize.textContent = 'WhatsApp + Instagram';
+    } else {
+      if (badgeFmt) badgeFmt.textContent = icon;
+      if (badgeSize) badgeSize.textContent = size;
+    }
     const feedPre = document.getElementById('fixed-' + i + '-feed');
     const storiesPre = document.getElementById('fixed-' + i + '-stories');
     if (feedPre) feedPre.style.display = isFeed ? 'block' : 'none';
